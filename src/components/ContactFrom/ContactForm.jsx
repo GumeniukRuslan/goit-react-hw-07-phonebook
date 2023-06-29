@@ -1,4 +1,3 @@
-import { nanoid } from "nanoid";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 
@@ -23,7 +22,7 @@ export const ContactForm = ({saveContact}) => {
 
   const submitForm = (evt) => {
     evt.preventDefault();
-    saveContact({ name, number, id: nanoid() })
+    saveContact({ name, number })
     evt.target.reset()
   }
 
